@@ -1,184 +1,198 @@
-/*     created by: Evans Pigon
+<!--   created by: Evans Pigon
        date: 6/26/2023
-       MCC
        class: CIS133DA
        title: Building a Tribute Page
-*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is my tribute to Sir Lewis Hamilton, Formula 1 driver."
+    />
+    <link rel="stylesheet" href="tribute.css" />
+    <title>Tribute Page to Sir Lewis Hamilton</title>
+  </head>
+  <!--visible on the page-->
+  <body>
+    <header>
+      <nav>
+        <ul class="topnav">
+          <!--navigation options-->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="header">
+        <h1 id="title">Sir Lewis Carl Davidson Hamilton</h1>
+        <p>More than just a driver</p>
 
-*
-  {   
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    
-  }
-/* these are for the upper toolbar (home / projects )*/
-.topnav 
-  {
-    background-color: #050505;
-    display: block;
-    list-style-type: none;
-    margin: 0;
-    padding: 2px;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%
-  }
+        <div class="img-div" id="img-div">
+          <figure>
+            <img
+              id="image"
+              src="images/LH_16x9.png"
+              alt="A wallpaper picture of Sir Lewis Hamilton in his racing suit: his F1 car and his signature also in the image"
+            />
+            <!-- image was found at https://www.mercedesamgf1.com/wallpapers -->
 
-.topnav li 
-    {
-      background-color: rgba(0, 161, 156, 0.637);
-      font-size: 1.5rem;
-      float:left;
-      display: inline;
-      border-right: 3px solid #050505;
-    }
-
-.topnav li:last-child 
-    {
-      border-right: none;
-      
-    }
-
-.topnav li a
-    {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    } 
-
-.topnav li a:hover
-    {
-      background-color: #fffefe;
-      color: black;
-    }
-
-/*making the colors be at a ratio of 10:1 from https://webaim.org/resources/contrastchecker/ */
-#main 
-  {
-    display: block;
-    margin: 30px 5px;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 16px ;
-    background: #403F3F;
-    min-width: 1158px;
-    border:3px solid black;
-  }
-
-#title 
-  {
-    font-size: 3rem;
-    margin-top: 50px;
-    margin-bottom: 0;
-    text-shadow: 4px 4px 4px rgba(0, 161, 156, 0.637);
-  }
-
-.header 
-  {
-    align-items: center;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-p
-  {
-    font-weight: bold;
-  }
-/* #image and #image setup was helped/inspired by https://forum.freecodecamp.org/t/tribute-page-img-element-should-be-centered-within-its-parent-element/395787  */
-
-#image
-  {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 5px 5px 5px  rgb(0, 161, 156);
-  }
-  
-#img-div #image 
-  {
-    display: block;
-		max-width: 100%;
- 		margin: 0 auto;
-		min-width: 800px;
-    width: 1000px;
-  }
-
-#img-div 
-  {
-    display: block;
-    background: black;
-    padding: 10px;
-    margin: auto;
-  }
-
-#img-div #img-caption 
-  {
-    display: block;
-    font-size: 17px;
-    letter-spacing: 1.1px;
-    font-weight: bold;
-    margin: 45px 0 5px 0;
-    padding-bottom: 10px;
-    text-shadow: 2px 2px 2px black;
-    text-decoration: underline;
-    text-underline-offset:3px;
-    text-decoration-color:rgb(0, 161, 156);
-    text-decoration-style: solid;
-  }
-  
-#tribute-info
-  {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-  }
-
-#tribute-info div ul li
-  {
-    width: 40%;
-    margin: 20px auto;
-    line-height: 30px ;
-    text-align: left;
-  }
-
-strong 
-  {
-    font-weight: bold;
-    color: rgb(255,255,555);
-    text-shadow: 1px 1px 1px rgb(70, 70, 70);
-    text-shadow: 1px 1px 1px rgb(0, 161, 155);
-  }
-  
-.quote
-  {
-    text-decoration: underline dotted;
-    text-decoration-color:rgb(0, 161, 155);
-  }
-
-  .footer
-  {
-    margin: 30px 0;
-    font-size: 15px;
-  }
-
-a 
-  {
-    cursor: pointer;
-    
-  }
- 
-
-  nav {
-    display: block;
-  }
+            <figcaption id="img-caption">
+              Sir Lewis Carl Davidson Hamilton, one of the most successful
+              Formula One drivers of all time.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="tribute-info">
+        <h2 id="headline">
+          Here's a timeline of Lewis Hamilton's life so far:
+        </h2>
+        <div>
+          <ul>
+            <li><strong>1985</strong> - Born in Hertfordshire, England.</li>
+            <li>
+              <strong>1990</strong> - After dominating the radio-controlled cars
+              at the national BRCA championship, Lewis' father bought him a
+              racing kart. He motivated him to get into racing as long as he did
+              well in school.
+            </li>
+            <li>
+              <strong>1993</strong> - With many wins under his belt, Lewis wins
+              the cadet class championships in karting.
+            </li>
+            <li>
+              <strong>1995</strong> - At 10, Lewis Hamilton becomes the youngest
+              driver to win the British cadet karting driver.
+            </li>
+            <li><strong>1999</strong> - Races in the Intercontinental A.</li>
+            <li>
+              <strong>2000</strong> - He transfers to Formula A, is named
+              European Champion with maximum points, and quickly rises to
+              Formula Super A by the end of the 2000s.
+            </li>
+            <li>
+              <strong>2001</strong> - He placed fifth in the British Formula
+              Renault Winter series shortly after he joined Manor Motorsport.
+            </li>
+            <li>
+              <strong>2002</strong> - Secures the championship in his third
+              season, which allows him to participate in the British Formula 3
+              championship.
+            </li>
+            <li>
+              <strong>2003</strong> - Earns fifth place in the championship with
+              Manor Motorsport in the F3 Euro series.
+            </li>
+            <li>
+              <strong>2005</strong> - Lewis goes on to win 15 out of 20 races
+              and wins the F3 Euro series as a driver for ASMotorsports. He is
+              featured in Autosport magazine as number 24 on the Top 50 drivers
+              of 2005. At the end of 2005, he joins ART GrandPrix team to start
+              the following year.
+            </li>
+            <li>
+              <strong>2006</strong> - Lewis wins the GP2 Championship. This
+              allows him to be signed to McLaren to participate in Formula One.
+              He became the first black driver to ever race in F1.
+            </li>
+            <li>
+              <strong>2007</strong> - In his rookie year, he won his first Grand
+              Prix in his sixth race in Canada. Due to his performance, he
+              secured a multi-million-dollar 5-year contract with McLaren.
+              Towards the end of the 2007 season, Lewis earns 2nd place in the
+              2007 World Driver's Championship.
+            </li>
+            <li>
+              <strong>2008</strong> - Lewis becomes the then-youngest Formula
+              One World Champion with five Grand Prix wins and ten podium
+              finishes.
+            </li>
+            <li>
+              <strong>2012</strong> - Once his contract with McLaren ended,
+              Lewis moved to Mercedes with the Mercedes AMG Petronas Formula One
+              race team.
+            </li>
+            <li>
+              <strong>2013</strong> - Lewis finished fourth in the championship
+              standings in his first season with Mercedes.
+            </li>
+            <li>
+              <strong>2014</strong> - In his second season with Mercedes, with
+              eleven personal wins and nineteen team wins, he secures the F1
+              Championship.
+            </li>
+            <li>
+              <strong>2015 </strong> - Lewis secures a record-breaking deal with
+              Mercedes. A three-year- contract worth over 100 million dollars
+              made him the best-paid sportsman in Britain. At the end of his
+              2005 season, he won the F1 Championship at the United States Grand
+              Prix in Austin, TX.
+            </li>
+            <li>
+              <strong>2017</strong> - His fourth Formula 1 World Championship
+              title is won In Mexico with two races remaining in the series. He
+              also becomes vegan because he wants to help the earth and have a
+              healthier life.
+            </li>
+            <li>
+              <strong>2018</strong> - Once again, Lewis wins a back-to-back
+              championship in Mexico, making it his fifth world championship. He
+              also Criticizes the F1 organization for its lack of diversity.
+            </li>
+            <li>
+              <strong>2019</strong> - On the last race of the 2019 season in Abu
+              Dhabi, Lewis won his 11th race and secured his sixth world
+              championship title. He also announces he aims to be carbon-neutral
+              by the end of the year.
+            </li>
+            <li>
+              <strong>2020</strong> - Hamilton surpasses the iconic Michael
+              Schumacher in race wins with 100 career wins and pole-positions
+              and ties on world championships with his seventh season win. With
+              his celebrity status, Hamilton increased awareness with the Black
+              Lives Matter movement and took a knee before every race in 2020.
+            </li>
+            <li>
+              <strong>2021</strong> - He created and launched the Mission 44
+              Foundation program to help bring more individuals from ethically
+              diverse backgrounds into motorsport. He also donated over 2.5
+              million dollars to health organizations around the world. In honor
+              of a fantastic career in F1 and personal accomplishments, Lewis is
+              knighted by the Prince of Wales.
+            </li>
+            <li>
+              <strong>2022</strong> - Donates more than 20 million dollars to
+              support education and employment and to help the youth.
+            </li>
+          </ul>
+        </div>
+        <section>
+          <div class="quote">
+            <p>
+              "You just need to be accepted for who you are and be proud of who
+              you are, and that is what I'm trying to do."
+            </p>
+            <cite>- Sir Lewis Hamilton</cite>
+          </div>
+        </section>
+        <section class="footer">
+          <h3>
+            If you would like to learn more about this incredible person, you
+            can read more on his
+            <a
+              id="tribute-link"
+              href="https://en.wikipedia.org/wiki/Lewis_Hamilton#Public_image_and_influence"
+              target="_blank"
+              >Wikipedia entry</a
+            >.
+          </h3>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
